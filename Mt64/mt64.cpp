@@ -3,9 +3,10 @@
 #include <fstream>
 #include <chrono>
 #include <cstdlib>  // Para usar la función std::atoi
+#include <omp.h>
 
 int main(int argc, char* argv[]) {
-
+    //omp_set_num_threads(1); // Usar 4 hilos
     if (argc != 2) {
         std::cerr << "Uso: " << argv[0] << " <numero>" << std::endl;
         return 1;
