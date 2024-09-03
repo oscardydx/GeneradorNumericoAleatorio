@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.pyplot as plt2
+
 # Leer los datos de la segunda columna
 columna_2 = np.loadtxt('datos.txt', usecols=1)
 
@@ -18,5 +18,6 @@ plt.ylabel('Frecuencia')
 # Guardar la imagen en formato PNG
 plt.savefig('histograma'+str(NDatos)+'.png')
 
-
+# Mostrar la gráfica
+plt.show()
 

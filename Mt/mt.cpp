@@ -26,8 +26,6 @@ int main(int argc, char* argv[]) {
   // Crear o abrir el archivo "datos.txt"
     std::ofstream archivo("datos.txt");
 
-    std::ofstream archivoTiempo("tiempos.txt",std::ios::app);
-
     // Tiempo de inicio
     auto start = std::chrono::high_resolution_clock::now();
 
@@ -50,14 +48,10 @@ int main(int argc, char* argv[]) {
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;
     std::cout <<NDatos<<" Datos " << "Tiempo de ejecución: " << elapsed.count() << " segundos\n";
-    //Agregar los tiempos en el archivo
-
-    archivoTiempo <<NDatos<<" " << elapsed.count() << std::endl;
     archivo <<NDatos<<" " << elapsed.count() << std::endl;
 
     // Cerrar el archivo
     archivo.close();
-    archivoTiempo.close();
 
     std::cout << "Datos escritos en datos.txt" << std::endl;
 
