@@ -6,7 +6,11 @@
 #include <omp.h>
 
 int main(int argc, char* argv[]) {
-    //omp_set_num_threads(1); // Usar 4 hilos
+    int num_threads = 16;  // Número de hilos a utilizar
+
+    // Establece el número de hilos
+    omp_set_num_threads(num_threads);
+    
     if (argc != 2) {
         std::cerr << "Uso: " << argv[0] << " <numero>" << std::endl;
         return 1;
@@ -38,19 +42,20 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    // Parallel for: los hilos se repartirán el trabajo del bucle
+    #pragma omp parallel for
     for (int i=0; i<NDatos; i++) {
    
         int numero_aleatorio = generador();
         archivo << i << " " << numero_aleatorio<< std::endl;
+        
 
     }
-
-    
 
      // Tiempo de fin
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;
-    std::cout <<NDatos<<" Datos " << "Tiempo de ejecución: " << elapsed.count() << " segundos\n";
+    std::cout<<NDatos<<" Datos " << "Tiempo de ejecución: " << elapsed.count() << " segundos\n";
     //Agregar los tiempos en el archivo
 
     archivoTiempo <<NDatos<<" " << elapsed.count() << std::endl;
