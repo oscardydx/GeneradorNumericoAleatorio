@@ -12,7 +12,7 @@ double generarAleatorioMt64() {
     static std::random_device rd;
     static std::mt19937_64 generador(rd());
     static std::uniform_real_distribution<double> distribucion(0.0, 1.0);
-    return generador();
+    return distribucion(generador);
 }
 
 int main() {
