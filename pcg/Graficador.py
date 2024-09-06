@@ -10,13 +10,13 @@ columna_2 = columna_2[:-1]
 NDatos=columna_2.size
 # Crear el histograma
 
-plt.hist(columna_2, bins=100, edgecolor='black')
-plt.title('Histograma mt64 con '+str(NDatos)+' de datos t='+ str(tiempo)+ 's' )
+plt.hist(columna_2, bins=5000, edgecolor='black')
+plt.title('Histograma pcg con '+str(NDatos)+' de datos t='+ str(tiempo)+ 's' )
 plt.xlabel('Valores')
 plt.ylabel('Frecuencia')
 
 # Guardar la imagen en formato PNG
-plt.savefig('histograma'+str(NDatos)+'.png')
+plt.savefig('histogramaPCG'+str(NDatos)+'.png')
 
 # Mostrar la gráfica
 plt.show()

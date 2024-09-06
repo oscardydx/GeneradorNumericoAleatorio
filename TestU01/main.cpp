@@ -22,14 +22,14 @@ int main() {
     unif01_Gen* gen = unif01_CreateExternGen01(nombre, generarAleatorioMt64);
 
     // Ejecutar pruebas con TestU01
-    std::cout << "Ejecutando prueba SmallCrush..." << std::endl;
+    std::cout << "Ejecutando prueba SmallCrush MT64..." << std::endl;
     bbattery_SmallCrush(gen);
 
-    std::cout << "Ejecutando prueba Crush..." << std::endl;
-    bbattery_Crush(gen);
+    //std::cout << "Ejecutando prueba Crush..." << std::endl;
+    //bbattery_Crush(gen);
 
-    std::cout << "Ejecutando prueba BigCrush..." << std::endl;
-    bbattery_BigCrush(gen);
+    //std::cout << "Ejecutando prueba BigCrush..." << std::endl;
+   // bbattery_BigCrush(gen);
 
     // Limpiar recursos
     unif01_DeleteGen(gen);
