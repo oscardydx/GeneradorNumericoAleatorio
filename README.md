@@ -18,7 +18,7 @@ Este proyecto es un generador de números aleatorios implementado en C++, utiliz
 - Biblioteca **PCG**.
 - Biblioteca **TestU01** para pruebas estadísticas de los generadores.
   
-## Instalación
+## Instalación y Uso
 
 1. Clona el repositorio:
    ```bash
@@ -53,13 +53,6 @@ Este proyecto es un generador de números aleatorios implementado en C++, utiliz
   ./exe NumeroDeDatosAGenerar
 ```
 
-## Uso
-
-Una vez compilado el proyecto, puedes ejecutar el generador con el siguiente comando:
-
-```bash
-./generador
-```
 
 ## Pruebas
 
