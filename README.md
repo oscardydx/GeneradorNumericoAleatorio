@@ -72,7 +72,7 @@ Este proyecto es un generador de números aleatorios implementado en C++, utiliz
 El proyecto incluye pruebas estadísticas con la biblioteca **TestU01**. Puedes ejecutarlas para analizar la aleatoriedad de las secuencias generadas por el generador de números aleatorios.
 
 ##Video 
-https://drive.google.com/drive/folders/1SPdCxVRmuuzyBgMH02QspwVP533FEaOF
+https://youtu.be/MyXYFmFAdd4
 
 ## Contribuciones
 
