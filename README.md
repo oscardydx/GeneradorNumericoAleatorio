@@ -53,6 +53,10 @@ Este proyecto es un generador de números aleatorios implementado en C++, utiliz
   ./exe NumeroDeDatosAGenerar
   python3 Graficador.py
 ```
+  opcional para graficar histogramas con python de las carpetas mt, mt64 y pcg despues de ejecutar los main.cpp y creado el archivo de datos.txt
+  ```bash
+  python3 Graficador.py
+```
 7.para compilar el escalamiento en openmp
 ```bash
     g++ -fopenmp ./a.out
