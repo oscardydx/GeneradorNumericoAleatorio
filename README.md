@@ -51,8 +51,17 @@ Este proyecto es un generador de números aleatorios implementado en C++, utiliz
 ```bash
    g++ -O3  -o exe main.cpp
   ./exe NumeroDeDatosAGenerar
+  python3 Graficador.py
 ```
+7.para compilar el escalamiento en openmp
+```bash
+    g++ -fopenmp ./a.out
 
+   for nth in {1..16}; do echo -n "$nth  " ; OMP_NUM_THREADS=$nth ./a.out 100000000 2; done | tee times.txt
+
+    awk '{print $1, tiempodeprimerthreads/$3,  tiempodeprimerthreads  /$3/$1}' times.txt >metrics.txt
+
+```
 
 ## Pruebas
 
